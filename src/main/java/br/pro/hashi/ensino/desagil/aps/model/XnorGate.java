@@ -1,11 +1,10 @@
 package br.pro.hashi.ensino.desagil.aps.model;
 
 public class XnorGate extends Gate {
-    NandGate nandLeft;
-    NandGate nandTop;
-    NandGate nandBottom;
-    NandGate nandRight;
-    NandGate nandNot;
+    private final NandGate nandLeft;
+    private final NandGate nandTop;
+    private final NandGate nandBottom;
+    private final NandGate nandNot;
 
     XnorGate() {
         super("XNOR", 2);
@@ -18,7 +17,7 @@ public class XnorGate extends Gate {
         nandBottom = new NandGate();
         nandBottom.connect(0, nandLeft);
 
-        nandRight = new NandGate();
+        NandGate nandRight = new NandGate();
         nandRight.connect(0, nandTop);
         nandRight.connect(1, nandBottom);
 

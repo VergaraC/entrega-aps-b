@@ -16,7 +16,7 @@ public class GateView extends FixedPanel implements ActionListener, MouseListene
     private final Switch switch1;
     private final Switch switch2;
     private final Image image;
-    private Light light;
+    private final Light light;
     private Color color;
 
     public GateView(Gate gates) {
